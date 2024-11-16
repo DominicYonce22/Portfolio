@@ -16,7 +16,9 @@ function Skills({ skills }) {
           Skills and Background
         </h2>
         {screenWidth > 1024 ? (
-          <SkillsParallax />
+          <div className="h-full w-full text-center text-3xl text-white">
+            You are at a bigger screen
+          </div>
         ) : (
           <SkillsCarousel skills={skills} />
         )}
