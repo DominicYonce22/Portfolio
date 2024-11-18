@@ -1,7 +1,7 @@
 export const skills = [
   {
     title: "Web Development",
-    subTitle: "Building Functional and Interactive Websites",
+    subTitle: "Building Interactive Websites",
     icon: "code-slash",
     qualities: [
       "HTML, CSS, and JavaScript",
@@ -14,7 +14,7 @@ export const skills = [
   },
   {
     title: "Web Design",
-    subTitle: "Visually Engaging and User-Centric Designs",
+    subTitle: "Engaging and User-Centric Designs",
     icon: "prism",
     qualities: [
       "Accessibility Focused",
@@ -27,7 +27,7 @@ export const skills = [
   },
   {
     title: "Back-End Basics",
-    subTitle: "Robust systems and optimized data flows",
+    subTitle: "Robust systems and data flows",
     icon: "server",
     qualities: [
       "Node.js: JavaScript on server",
@@ -39,13 +39,25 @@ export const skills = [
   },
   {
     title: "Frameworks/Libraries",
-    subTitle: "Faster development with modern technologies",
+    subTitle: "Faster development with modern tools",
     icon: "layers",
     qualities: [
       "Vite: Fast build tool",
       "Next.js: SSR & static",
       "React.js: UI library",
       "Tailwind CSS: Utility CSS",
+    ],
+  },
+  {
+    title: "Soft Skills",
+    subTitle: "Collaboration for team success",
+    icon: "people",
+    qualities: [
+      "Clear Communication",
+      "Team Collaboration",
+      "Adaptability & Flexibility",
+      "Empathy & Emotional Intelligence",
+      "Time Management",
     ],
   },
 ];

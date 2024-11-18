@@ -5,7 +5,7 @@ import Header from "./components/Header";
 
 function Layout() {
   return (
-    <div className="w-screen">
+    <div>
       <Header />
       <main>
         <Outlet />

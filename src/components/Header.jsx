@@ -21,13 +21,11 @@ function Header() {
   }, []);
 
   return (
-    <header className="relative flex justify-between bg-[#060e18] px-14 py-9 oldPhone:px-7 oldPhone:py-3">
-      <Logo />
-
+    <header className="relative justify-center bg-black px-14 py-9 oldPhone:px-7 oldPhone:py-3 lg:flex">
       <menu
         className={`${openMenu ? "top-[100%] border-[1px] border-[#2cd2dd]" : "top-[-100vw]"} absolute right-[5%] z-50 rounded-xl bg-inherit px-3 py-4 lg:static lg:rounded-none lg:border-none lg:bg-transparent lg:px-0 lg:py-0`}
       >
-        <div className="flex flex-col items-end gap-3 lg:flex-row lg:items-center lg:py-0">
+        <div className="flex flex-col items-end gap-3 lg:flex-row lg:items-center lg:gap-24 lg:pt-3">
           <li>
             <RegularButton openMenu={openMenu} text="Portfolio" />
           </li>
@@ -35,9 +33,7 @@ function Header() {
             <RegularButton openMenu={openMenu} text="Blog" />
           </li>
           <li>
-            <CtaButton icon={<ion-icon name="call"></ion-icon>}>
-              Contact Me
-            </CtaButton>
+            <RegularButton openMenu={openMenu} text="Another" />
           </li>
         </div>
       </menu>
