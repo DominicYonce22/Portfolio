@@ -4,6 +4,7 @@ import SkillsCarousel from "./SkillsCarousel";
 import SkillsParallax from "./SkillsParallax";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Testing from "../../components/Testing";
 function Skills({ skills }) {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
@@ -44,8 +45,8 @@ function Skills({ skills }) {
   // });
 
   return (
-    <section className="bg-[#060e18]">
-      <div className="oldphone:w-[90%] h-[100%] pt-11 oldPhone:mx-auto oldPhone:w-[90%] md:flex md:w-full md:flex-col md:items-center">
+    <section className="bg-black">
+      <div className="oldphone:w-[90%] h-[100%] oldPhone:mx-auto oldPhone:w-[90%] md:flex md:w-full md:flex-col md:items-center">
         <div className="relative w-full overflow-hidden">
           {/* <div className="text-wrapper flex max-w-max">
             <h2 className="mb-20 whitespace-nowrap bg-[#2cd2dd] pr-8 text-center font-semibold uppercase text-black oldPhone:text-xl android:text-8xl">
@@ -63,11 +64,7 @@ function Skills({ skills }) {
             </h2>
           </div> */}
         </div>
-        {screenWidth > 768 ? (
-          <SkillsParallax />
-        ) : (
-          <SkillsCarousel skills={skills} />
-        )}
+        {screenWidth > 768 ? <Testing /> : <SkillsCarousel skills={skills} />}
       </div>
     </section>
   );

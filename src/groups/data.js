@@ -38,7 +38,7 @@ export const skills = [
     ],
   },
   {
-    title: "Frameworks/Libraries",
+    title: "Libraries",
     subTitle: "Faster development with modern tools",
     icon: "layers",
     qualities: [

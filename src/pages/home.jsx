@@ -1,4 +1,5 @@
 import CtaButton from "../components/CtaButton";
+import TrackRecord from "../components/TrackRecord";
 import Testing from "../components/Testing";
 import { skills } from "../groups/data";
 import Skills from "./home/Skills";
@@ -25,7 +26,7 @@ function Home() {
           </p>
         </div>
       </section>
-      <Testing />
+      <TrackRecord />
 
       <Skills skills={skills} />
     </>

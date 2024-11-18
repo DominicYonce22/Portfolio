@@ -5,7 +5,7 @@ import Logo from "./Logo";
 
 function Footer() {
   return (
-    <footer className="grid bg-[#060e18] text-white android:grid-cols-1 sm:grid-cols-3 sm:gap-x-10 sm:gap-y-5 sm:px-16 sm:py-14 sm:text-sm md:grid-cols-3 lg:grid-cols-3">
+    <footer className="grid bg-black text-[#2cd2dd] android:grid-cols-1 sm:grid-cols-3 sm:gap-x-10 sm:gap-y-5 sm:px-16 sm:py-14 sm:text-sm md:grid-cols-3 lg:grid-cols-3">
       <ul className="flex-col gap-1 text-[10px] oldPhone:hidden oldPhone:text-[8px] sm:flex sm:text-[9px] md:gap-2 md:text-sm">
         <li className="street">Prk. Riverside, Sum-ag</li>
         <li className="province">Negros Occidental, Bacolod City</li>

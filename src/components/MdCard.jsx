@@ -19,9 +19,9 @@ export default function MdCard() {
           SKILL TITLE
         </h2>
       </div>
-      <div className="w-full bg-white p-10">
+      <div className="w-full bg-black">
         <h3 className="mb-9 text-3xl font-bold text-[#2cd2dd]">HUNTY</h3>
-        <p>
+        <p className="text-[#2cd2dd]">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, dolor
           enim repudiandae consequuntur inventore, animi, harum dolore
           laudantium non sunt perspiciatis. In unde deleniti ex fugiat velit
