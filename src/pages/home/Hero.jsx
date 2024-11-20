@@ -77,8 +77,8 @@ export default function Hero() {
         duration: 0.4,
         ease: "power4.out",
       });
-
     let tl = gsap.timeline({ paused: true });
+
     tl.to(hiddenContent.current, {
       "--size": 250,
       duration: 0.75,
@@ -123,11 +123,19 @@ export default function Hero() {
       xTo(x);
     });
 
-    return () => {
-      hoverContent.current.removeEventListener("mouseenter", () => {});
-      hoverContent.current.removeEventListener("mouseleave", () => {});
-      container.current.removeEventListener("mousemove", () => {});
-    };
+    container.current.addEventListener("mouseleave", () => {
+      gsap.set(hiddenContent.current, {
+        autoAlpha: 0, // Hide the content
+        ease: "back.out(1.7)", // Intense ease-in-out with a back-and-forth overshoot for a "shwoop" effect
+      });
+    });
+
+    container.current.addEventListener("mouseenter", () => {
+      gsap.set(hiddenContent.current, {
+        autoAlpha: 1, //show the mask
+        ease: "back.in(1.7)", // Intense ease-in-out with a back-and-forth overshoot for a "shwoop" effect
+      });
+    });
   });
 
   return (
