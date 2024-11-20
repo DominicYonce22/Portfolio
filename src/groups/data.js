@@ -7,8 +7,7 @@ export const skills = [
       "HTML, CSS, and JavaScript",
       "Responsive design",
       "Front-end functionality",
-      "Backend functionality",
-      "Fast Loading & Optimized",
+
       "Write clean, modular code",
     ],
   },
@@ -19,8 +18,7 @@ export const skills = [
     qualities: [
       "Accessibility Focused",
       "User-Friendly Layouts",
-      "Consistent and cohesive Style",
-      "Attention to Detail",
+
       "On-Brand Visuals",
       "Engaging Visual Hierarchy",
     ],
@@ -33,7 +31,7 @@ export const skills = [
       "Node.js: JavaScript on server",
       "MongoDB: NoSQL database",
       "Express: Node.js framework",
-      "PostgreSQL: Relational queries",
+
       "Supabase: Open-source backend",
     ],
   },

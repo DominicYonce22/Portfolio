@@ -1,4 +1,4 @@
-import CarouselProvider from "./CarouselProvider";
+import AppContextProvider from "./AppContextProvider";
 import Layout from "./Layout";
 import Home from "./pages/home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -11,9 +11,9 @@ function App() {
           <Route
             index
             element={
-              <CarouselProvider>
+              <AppContextProvider>
                 <Home />
-              </CarouselProvider>
+              </AppContextProvider>
             }
           />
         </Route>

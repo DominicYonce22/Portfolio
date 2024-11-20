@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { AppContext } from "../../AppContextProvider";
 
 export default function TrackRecord() {
   const scrollEl = useRef(null);
@@ -13,6 +14,15 @@ export default function TrackRecord() {
   const track = useRef(null);
   const record = useRef(null);
   const recap = useRef(null);
+  const { screenWidth, handleResize } = useContext(AppContext);
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   gsap.registerPlugin(useGSAP, ScrollTrigger);
   useGSAP(() => {
     gsap.set(
@@ -78,95 +88,98 @@ export default function TrackRecord() {
   return (
     <div
       ref={scrollEl}
-      className="grid h-screen w-full grid-cols-4 grid-rows-[3fr_2fr_9fr] bg-black px-10 pb-9 text-[#2cd2dd]"
+      className="grid h-screen w-full bg-black px-10 text-[#2cd2dd] oldPhone:grid-cols-2 oldPhone:grid-rows-[2fr_repeat(3,_1fr)_2fr] oldPhone:pb-16 oldPhone:text-xs android:text-sm sm:pb-24 sm:text-lg lg:grid-cols-4 lg:grid-rows-[3fr_2fr_9fr] lg:pb-9 lg:text-xl xl:text-2xl"
     >
-      <div className="col-span-full flex items-center justify-end">
+      <div className="col-span-full flex items-center oldPhone:flex oldPhone:justify-center lg:justify-end">
         <div className="w-fit overflow-hidden">
-          <p ref={blind1} className="text-2xl font-bold uppercase leading-none">
+          <p ref={blind1} className="font-bold uppercase leading-none">
             Well versed developer with a designer's eye
           </p>
         </div>
       </div>
-      <div className="col-span-2 flex flex-col justify-end overflow-hidden">
+      <div className="flex overflow-hidden oldPhone:col-span-2 lg:col-span-2 lg:col-start-1 lg:row-start-2 xl:flex-col xl:justify-end">
         <div ref={blind2} className="w-fit">
-          <p className="text-2xl font-bold uppercase leading-none">
+          <p className="font-bold uppercase leading-none">
             Young Designer Award
           </p>
-          <p className="text-2xl font-bold uppercase leading-none">
-            STI West Negros
-          </p>
-          <p className="text-2xl font-bold uppercase leading-none">
-            Hackathon 2024
-          </p>
+          <p className="font-bold uppercase leading-none">STI West Negros</p>
+          <p className="font-bold uppercase leading-none">Hackathon 2024</p>
         </div>
       </div>
-      <div className="col-span-2 flex items-end overflow-hidden">
-        <div ref={blind3} className="w-fit overflow-hidden">
-          <p className="text-2xl font-bold uppercase leading-none">
-            Assistant Web
-          </p>
-          <p className="text-2xl font-bold uppercase leading-none">
-            Developer/OJT
-          </p>
-          <p className="text-2xl font-bold uppercase leading-none">
-            at PhilBio (2024)
-          </p>
+      <div className="flex overflow-hidden oldPhone:col-span-2 oldPhone:row-start-3 oldPhone:items-center oldPhone:justify-end lg:col-span-2 lg:col-start-3 lg:row-start-2 lg:justify-start lg:pl-14 xl:items-end">
+        <div
+          ref={blind3}
+          className="w-fit overflow-hidden oldPhone:flex oldPhone:h-full oldPhone:flex-col oldPhone:justify-center"
+        >
+          <p className="font-bold uppercase leading-none">Assistant Web</p>
+          <p className="font-bold uppercase leading-none">Developer/OJT</p>
+          <p className="font-bold uppercase leading-none">at PhilBio (2024)</p>
         </div>
       </div>
-      <div className="col-span-1 flex items-center justify-center">
+      <div className="flex items-center oldPhone:col-span-2 oldPhone:justify-start lg:col-span-1 lg:row-start-3 lg:justify-center">
         <div className="w-fit overflow-hidden">
           <div ref={blind4} className="w-fit">
             {" "}
-            <p className="text-end text-2xl font-bold uppercase leading-none">
+            <p className="text-end font-bold uppercase leading-none oldPhone:text-start">
               Thesis Lead Developer
             </p>{" "}
-            <p className="text-end text-2xl font-bold uppercase leading-none">
+            <p className="text-end font-bold uppercase leading-none oldPhone:text-start">
               Butterfly Image
             </p>{" "}
-            <p className="text-end text-2xl font-bold uppercase leading-none">
+            <p className="text-end font-bold uppercase leading-none oldPhone:text-start">
               {" "}
               Classification
             </p>{" "}
-            <p className="text-end text-2xl font-bold uppercase leading-none">
+            <p className="text-end font-bold uppercase leading-none oldPhone:text-start">
               (2022-2024)
             </p>
           </div>
         </div>
       </div>
-      <div className="col-span-1">
-        <div className="w-fit overflow-hidden">
-          <div ref={blind5} className="w-fit">
+      <div className="oldPhone:col-span-2 oldPhone:flex oldPhone:justify-end lg:col-span-1 lg:col-start-2 lg:row-start-3 lg:items-start">
+        <div className="w-fit overflow-hidden lg:w-fit">
+          <div
+            ref={blind5}
+            className="oldPhone:h- w-fit oldPhone:flex oldPhone:flex-col oldPhone:justify-center lg:h-fit"
+          >
             {" "}
-            <p className="text-2xl font-bold uppercase leading-none">
+            <p className="font-bold uppercase leading-none oldPhone:text-end">
               Thesis Project Manager
             </p>{" "}
-            <p className="text-2xl font-bold uppercase leading-none">
+            <p className="font-bold uppercase leading-none oldPhone:text-end">
               Butterfly Image
             </p>{" "}
-            <p className="text-2xl font-bold uppercase leading-none">
+            <p className="font-bold uppercase leading-none oldPhone:text-end">
               {" "}
               Classification
             </p>{" "}
-            <p className="text-2xl font-bold uppercase leading-none">
+            <p className="font-bold uppercase leading-none oldPhone:text-end">
               (2022-2024)
             </p>
           </div>
         </div>
       </div>
-      <div className="col-span-2 flex flex-col items-end justify-end overflow-hidden">
-        <div
-          ref={track}
-          className="text-[10rem] font-bold uppercase leading-[.76]"
-        >
-          Track
+      <div className="col-span-2 flex flex-col items-end justify-end overflow-hidden lg:col-span-2 lg:col-start-3 lg:row-span-2 lg:row-start-3">
+        <div className="flex h-full items-center space-x-5 lg:flex-col lg:items-end lg:justify-end">
+          {" "}
+          {/* Inline alignment for Track & Record */}
+          <div
+            ref={track}
+            className="bg font-bold uppercase leading-[.76] oldPhone:text-start oldPhone:text-4xl android:text-5xl sm:text-6xl lg:text-8xl xl:text-[10rem]"
+          >
+            Track
+          </div>
+          <div
+            ref={record}
+            className="font-bold uppercase leading-[.72] oldPhone:text-4xl android:text-5xl sm:text-6xl lg:text-8xl xl:text-[10rem]"
+          >
+            Record
+          </div>
         </div>
         <div
-          ref={record}
-          className="text-[10rem] font-bold uppercase leading-[.72]"
+          ref={recap}
+          className="oldPhone:text-md font-bold uppercase xl:text-lg"
         >
-          Record
-        </div>
-        <div ref={recap} className="text-lg font-bold uppercase">
           experience highlights
         </div>
       </div>

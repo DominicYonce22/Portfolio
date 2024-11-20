@@ -48,23 +48,10 @@ function Skills({ skills }) {
   return (
     <section className="bg-black">
       <div className="oldphone:w-[90%] h-[100%] oldPhone:mx-auto oldPhone:w-[90%] md:flex md:w-full md:flex-col md:items-center">
-        <div className="relative w-full overflow-hidden">
-          {/* <div className="text-wrapper flex max-w-max">
-            <h2 className="mb-20 whitespace-nowrap bg-[#2cd2dd] pr-8 text-center font-semibold uppercase text-black oldPhone:text-xl android:text-8xl">
-              Skills and Background
-            </h2>
-            <h2 className="mb-20 whitespace-nowrap bg-[#2cd2dd] pr-8 text-center font-semibold uppercase text-black oldPhone:text-xl android:text-8xl">
-              Skills and Background
-            </h2>
-            <h2 className="mb-20 whitespace-nowrap bg-[#2cd2dd] pr-8 text-center font-semibold uppercase text-black oldPhone:text-xl android:text-8xl">
-              Skills and Background
-            </h2>
+        <h2 className="py-10 pl-5 text-center text-4xl font-bold text-[#2cd2dd] md:hidden">
+          Skills
+        </h2>
 
-            <h2 className="mb-20 whitespace-nowrap bg-[#2cd2dd] text-center font-semibold uppercase text-black oldPhone:text-xl android:text-8xl">
-              Skills and Background
-            </h2>
-          </div> */}
-        </div>
         {screenWidth > 768 ? (
           <SkillsHover />
         ) : (
