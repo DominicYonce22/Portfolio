@@ -61,7 +61,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 
-export default function Testing() {
+export default function Hero() {
   const hiddenContent = useRef(null);
   const hoverContent = useRef(null);
   const container = useRef(null);
@@ -88,13 +88,11 @@ export default function Testing() {
     // Trigger forward animation on mouseenter
     hoverContent.current.addEventListener("mouseenter", () => {
       tl.restart();
-      console.log("entered");
     });
 
     // Trigger reverse animation on mouseleave
     hoverContent.current.addEventListener("mouseleave", () => {
       tl.reverse();
-      console.log("removed");
     });
 
     // Track mouse position and apply to hidden content with boundingRect
@@ -133,24 +131,29 @@ export default function Testing() {
   });
 
   return (
-    <section ref={container} className="relative bg-black py-16 sm:py-24">
-      <div className="w-full bg-black py-[3rem] text-justify text-[2rem] tracking-tighter backdrop-blur-md oldPhone:py-6 android:rounded-2xl md:py-16">
-        <div ref={hoverContent}>
-          <p className="text-center font-bold text-[#ced4da] oldPhone:text-lg sm:text-3xl">
-            Hi, Im
-          </p>
-          <h1 className="mb-6 text-center font-bold uppercase text-[#2cd2dd] oldPhone:text-4xl android:px-7 android:text-[2.8rem] android:tracking-wider md:mb-12 md:text-3xl xl:text-9xl">
-            Dominic Bonafe
-          </h1>
+    <section
+      ref={container}
+      className="relative h-screen bg-black py-16 sm:py-24"
+    >
+      <div className="h-full w-full bg-black py-[3rem] text-justify text-[2rem] tracking-tighter backdrop-blur-md oldPhone:py-6 android:rounded-2xl md:py-16">
+        <p className="text-center font-bold text-[#ced4da] oldPhone:text-lg sm:text-3xl">
+          Hi, Im
+        </p>
+        <h1 className="mb-6 text-center font-bold uppercase text-[#2cd2dd] oldPhone:text-4xl android:px-7 android:text-[2.8rem] android:tracking-wider md:mb-12 md:text-3xl xl:text-9xl">
+          Dominic Bonafe
+        </h1>
 
-          <p className="mb-2 text-sm leading-normal text-[#ced4da] oldPhone:mb-10 oldPhone:px-8 oldPhone:text-sm oldPhone:leading-6 oldPhone:tracking-[-1.5px] android:mb-16 android:leading-6 android:tracking-[-.5px] sm:px-[8%] sm:text-lg sm:leading-8 md:mb-14 md:text-xl md:leading-6 md:tracking-[-2px] lg:text-2xl">
-            Hi, I am Dominic. I am a{" "}
-            <span className="text-[#2cd2dd]"> Frontend Developer</span>. Heres
-            the tea i work for free. then see if u like it. its a trade i gain
-            exp u gain free worker. Try the buttons below they make the text
-            change.{" "}
-          </p>
-        </div>
+        <p
+          ref={hoverContent}
+          className="mb-2 text-sm leading-normal text-[#ced4da] oldPhone:mb-10 oldPhone:px-8 oldPhone:text-sm oldPhone:leading-6 oldPhone:tracking-[-1.5px] android:mb-16 android:leading-6 android:tracking-[-.5px] sm:px-[8%] sm:text-lg sm:leading-8 md:mb-14 md:text-xl md:leading-6 md:tracking-[-2px] lg:px-32 lg:text-2xl"
+        >
+          Hi, I am Dominic. I am a{" "}
+          <span className="text-[#2cd2dd]"> Frontend Developer</span>. Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Minima, incidunt
+          alias aliquid ratione blanditiis quasi, nulla aspernatur dignissimos
+          veritatis consequuntur libero? Reiciendis reprehenderit suscipit,
+          tempora placeat explicabo architecto perspiciatis illum!
+        </p>
       </div>
       <div
         ref={hiddenContent}
@@ -163,7 +166,7 @@ export default function Testing() {
           maskImage:
             "radial-gradient(circle at var(--x) var(--y), black var(--size), transparent 0)",
         }}
-        className="absolute bottom-0 left-0 right-0 top-0 flex w-full flex-col items-center justify-center bg-gradient-to-b from-[#d5f6f8] to-[#2cd2dd] py-[3rem] text-justify text-[2rem] tracking-tighter backdrop-blur-md oldPhone:py-6 android:rounded-2xl md:py-16"
+        className="absolute bottom-0 left-0 right-0 top-0 h-full w-full bg-gradient-to-b from-[#d5f6f8] to-[#2cd2dd] text-justify text-[2rem] tracking-tighter backdrop-blur-md oldPhone:py-6 android:rounded-2xl md:py-40"
       >
         <p className="text-center font-bold text-[#1f939b] oldPhone:text-lg sm:text-3xl">
           Hi, Im
@@ -172,11 +175,13 @@ export default function Testing() {
           Dominic Bonafe
         </h1>
 
-        <p className="mb-2 text-sm leading-normal text-black oldPhone:mb-10 oldPhone:px-8 oldPhone:text-sm oldPhone:leading-6 oldPhone:tracking-[-1.5px] android:mb-16 android:leading-6 android:tracking-[-.5px] sm:px-[8%] sm:text-lg sm:leading-8 md:mb-14 md:text-xl md:leading-6 md:tracking-[-2px] lg:text-2xl">
+        <p className="mb-2 text-sm leading-normal text-black oldPhone:mb-10 oldPhone:px-8 oldPhone:text-sm oldPhone:leading-6 oldPhone:tracking-[-1.5px] android:mb-16 android:leading-6 android:tracking-[-.5px] sm:px-[8%] sm:text-lg sm:leading-8 md:mb-14 md:text-xl md:leading-6 md:tracking-[-2px] lg:px-32 lg:text-2xl">
           Hi, I am Dominic. I am a{" "}
-          <span className="text-white"> Frontend Developer</span>. Heres the tea
-          i work for free. then see if u like it. its a trade i gain exp u gain
-          free worker. Try the buttons below they make the text change.{" "}
+          <span className="text-white"> Frontend Developer</span>. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Illum veritatis ratione,
+          odio quas fugit explicabo maiores, exercitationem, earum hic iusto
+          velit. Ad earum, incidunt odio itaque temporibus saepe ipsa
+          recusandae?
         </p>
       </div>
     </section>

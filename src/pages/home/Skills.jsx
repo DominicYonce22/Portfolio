@@ -5,6 +5,7 @@ import SkillsParallax from "./SkillsParallax";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Testing from "../../components/Testing";
+import SkillsHover from "./SkillsHover";
 function Skills({ skills }) {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
@@ -64,7 +65,11 @@ function Skills({ skills }) {
             </h2>
           </div> */}
         </div>
-        {screenWidth > 768 ? <Testing /> : <SkillsCarousel skills={skills} />}
+        {screenWidth > 768 ? (
+          <SkillsHover />
+        ) : (
+          <SkillsCarousel skills={skills} />
+        )}
       </div>
     </section>
   );
