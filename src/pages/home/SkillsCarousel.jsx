@@ -16,7 +16,7 @@ function SkillsCarousel({ skills }) {
         {transitions((style, index) => {
           return (
             <animated.div
-              className="oldPhone:h-[24rem] android:h-[30rem] sm:w-[60%]"
+              className="oldPhone:h-[24rem] oldPhone:w-[90%] android:h-[30rem] sm:w-[60%]"
               key={skills[index].title}
               style={{
                 ...style,
@@ -63,13 +63,13 @@ function SkillsCarousel({ skills }) {
       <div className="mx-auto flex w-[90%] grid-cols-2 justify-center gap-4 pb-8">
         <button
           onClick={handlePrev}
-          className="flex h-[2rem] w-[90%] items-center justify-center rounded-sm bg-[#2cd2dd] text-black sm:hidden"
+          className="flex h-[2rem] w-[90%] items-center justify-center rounded-sm bg-[#2cd2dd] uppercase text-black sm:hidden"
         >
           previous
         </button>
         <button
           onClick={handleNext}
-          className="flex h-[2rem] w-[90%] items-center justify-center rounded-sm bg-[#2cd2dd] sm:hidden"
+          className="flex h-[2rem] w-[90%] items-center justify-center rounded-sm bg-[#2cd2dd] uppercase sm:hidden"
         >
           <span>next</span>
         </button>

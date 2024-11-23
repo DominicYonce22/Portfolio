@@ -1,61 +1,3 @@
-// import { useGSAP } from "@gsap/react";
-// import { gsap } from "gsap/gsap-core";
-
-// import ScrollTrigger from "gsap/ScrollTrigger";
-// import { useRef } from "react";
-
-// export default function Testing() {
-//   const mask = useRef(null);
-//   const hoverArea = useRef(null);
-//   const testing = useRef(null);
-//   gsap.registerPlugin(ScrollTrigger);
-//   useGSAP(() => {
-//     let xTo = gsap.quickTo(mask.current, "--x", { duration: 0.4 }),
-//       yTo = gsap.quickTo(mask.current, "--y", { duration: 0.4 });
-
-//     testing.current.addEventListener("mousemove", (e) => {
-//       xTo(e.pageX);
-//       yTo(e.pageY);
-
-//       console.log(
-//         "Target X (Mouse):",
-//         e.pageX,
-//         "Animating To:",
-//         mask.current.style.getPropertyValue("--x"),
-//       );
-//     });
-
-//     return () => {
-//       // hoverArea.current.removeEventListener("mouseenter", () => {});
-//       // hoverArea.current.removeEventListener("mouseleave", () => {});
-//       testing.current.removeEventListener("mousemove", () => {});
-//     };
-//   });
-//   return (
-//     <section ref={testing} className="relative h-screen w-screen bg-black">
-//       <div className="mx-auto flex h-full w-full items-center justify-center bg-white text-2xl font-bold text-[#2cd2dd]">
-//         <p className="bg-pink-600" ref={hoverArea}>
-//           This is a drill. remain calm
-//         </p>
-//       </div>
-
-//       <div
-//         ref={mask}
-//         style={{
-//           // visibility: "hidden",
-//           "--x": "0px",
-//           "--y": "0px",
-//           "--size": "5px",
-//           pointerEvents: "none",
-//         }}
-//         className="absolute bottom-0 left-0 right-0 top-0 mx-auto flex h-full w-[90%] items-center justify-center bg-white text-7xl font-bold text-[#2cd2dd]"
-//       >
-//         This is the mask. ohh chile
-//       </div>
-//     </section>
-//   );
-// }
-
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -143,16 +85,16 @@ export default function Hero() {
       ref={container}
       className="relative h-screen bg-black py-16 sm:py-24"
     >
-      <div className="h-full w-full bg-black py-[3rem] text-justify text-[2rem] tracking-tighter backdrop-blur-md oldPhone:py-6 android:rounded-2xl md:py-16">
+      <div className="h-full bg-black py-[3rem] text-justify text-[2rem] tracking-tighter backdrop-blur-md oldPhone:mx-auto oldPhone:w-[90%] oldPhone:py-6 md:py-16">
         <div ref={hoverContent}>
           <p className="text-center font-bold text-[#ced4da] oldPhone:text-lg sm:text-3xl">
             Hi, Im
           </p>
-          <h1 className="mb-6 text-center font-bold uppercase text-[#2cd2dd] oldPhone:text-4xl android:px-7 android:text-[2.8rem] android:tracking-wider md:mb-12 md:text-6xl lg:mb-20 lg:text-[90px] xl:text-9xl">
+          <h1 className="mb-6 text-center font-bold uppercase text-[#2cd2dd] oldPhone:mb-10 oldPhone:text-4xl android:px-7 android:text-[2.8rem] android:tracking-wider md:mb-12 md:text-6xl lg:mb-20 lg:text-[90px] xl:text-9xl">
             Dominic Bonafe
           </h1>
 
-          <p className="leading-norma android:text-md mb-2 text-sm text-[#ced4da] oldPhone:mb-10 oldPhone:px-8 oldPhone:text-sm oldPhone:leading-6 oldPhone:tracking-[-1.5px] android:mb-16 android:px-[60px] android:font-bold android:leading-7 android:tracking-tight sm:px-[8%] sm:text-lg sm:leading-8 md:mb-14 md:text-xl md:font-normal md:leading-10 md:tracking-[-2px] lg:px-32 lg:text-2xl lg:font-normal lg:leading-[45px] lg:tracking-[-3px]">
+          <p className="android:text-md bg mb-2 w-full text-sm leading-normal text-[#ced4da] oldPhone:mb-10 oldPhone:break-all oldPhone:px-8 oldPhone:text-sm oldPhone:leading-[2.2] oldPhone:tracking-[0.5px] oldPhone:[word-spacing:0.8px] android:mb-16 android:font-bold android:leading-7 android:tracking-tight sm:px-[8%] sm:text-lg sm:leading-8 md:mb-14 md:text-xl md:font-normal md:leading-10 md:tracking-[-2px] lg:px-32 lg:text-2xl lg:font-normal lg:leading-[45px] lg:tracking-[-3px]">
             Hi, I am Dominic. I am a{" "}
             <span className="text-[#2cd2dd]"> Frontend Developer</span>. Lorem
             ipsum dolor sit amet consectetur adipisicing elit. Minima, incidunt
@@ -173,23 +115,25 @@ export default function Hero() {
           maskImage:
             "radial-gradient(circle at var(--x) var(--y), black var(--size), transparent 0)",
         }}
-        className="absolute bottom-0 left-0 right-0 top-0 mx-auto h-full bg-gradient-to-b from-[#d5f6f8] to-[#2cd2dd] text-justify text-[2rem] tracking-tighter backdrop-blur-md oldPhone:py-[86px] android:rounded-2xl sm:py-[120px] md:py-[160px]"
+        className="absolute bottom-0 left-0 right-0 top-0 mx-auto h-full bg-gradient-to-b from-[#d5f6f8] to-[#2cd2dd] text-justify text-[2rem] tracking-tighter backdrop-blur-md oldPhone:py-[86px] sm:py-[120px] md:py-[160px]"
       >
-        <p className="text-center font-bold text-[#1f939b] oldPhone:text-lg sm:text-3xl">
-          Hi, Im
-        </p>
-        <h1 className="mb-6 text-center font-bold uppercase text-[#0d3f42] oldPhone:text-4xl android:px-7 android:text-[2.8rem] android:tracking-wider md:mb-12 md:text-6xl lg:mb-20 lg:text-[90px] xl:text-9xl">
-          Dominic Bonafe
-        </h1>
+        <div className="oldPhone:mx-auto oldPhone:w-[90%]">
+          <p className="text-center font-bold text-[#23a8b1] oldPhone:text-lg sm:text-3xl">
+            Hi, Im
+          </p>
+          <h1 className="mb-6 text-center font-bold uppercase text-[#16696f] oldPhone:mb-10 oldPhone:text-4xl android:px-7 android:text-[2.8rem] android:tracking-wider md:mb-12 md:text-6xl lg:mb-20 lg:text-[90px] xl:text-9xl">
+            Dominic Bonafe
+          </h1>
 
-        <p className="android:text-md mb-2 text-sm font-bold leading-normal text-black oldPhone:mb-10 oldPhone:px-8 oldPhone:text-sm oldPhone:leading-6 oldPhone:tracking-[-1.5px] android:mb-16 android:px-[60px] android:font-bold android:leading-7 android:tracking-tight sm:px-[8%] sm:text-lg sm:leading-8 md:mb-14 md:text-xl md:font-normal md:leading-10 md:tracking-[-2px] lg:px-32 lg:text-2xl lg:font-normal lg:leading-[45px] lg:tracking-[-3px]">
-          Hi, I am Dominic. I am a{" "}
-          <span className="text-white"> Frontend Developer</span>. Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit. Illum veritatis ratione,
-          odio quas fugit explicabo maiores, exercitationem, earum hic iusto
-          velit. Ad earum, incidunt odio itaque temporibus saepe ipsa
-          recusandae?
-        </p>
+          <p className="android:text-md mb-2 w-full text-sm font-bold leading-normal text-black oldPhone:mb-10 oldPhone:break-all oldPhone:px-8 oldPhone:text-sm oldPhone:leading-[2.2] oldPhone:tracking-[0.5px] oldPhone:[word-spacing:0.8px] android:mb-16 android:font-bold android:leading-7 android:tracking-tight sm:px-[8%] sm:text-lg sm:leading-8 md:mb-14 md:text-xl md:font-normal md:leading-10 md:tracking-[-2px] lg:px-32 lg:text-2xl lg:font-normal lg:leading-[45px] lg:tracking-[-3px]">
+            Hi, I am Dominic. I am a{" "}
+            <span className="text-white"> Frontend Developer</span>. Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit. Illum veritatis
+            ratione, odio quas fugit explicabo maiores, exercitationem, earum
+            hic iusto velit. Ad earum, incidunt odio itaque temporibus saepe
+            ipsa recusandae?
+          </p>
+        </div>
       </div>
     </section>
   );

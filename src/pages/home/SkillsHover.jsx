@@ -6,7 +6,7 @@ import { skills } from "../../groups/data";
 
 export default function SkillsHover() {
   const [index, setIndex] = useState(0);
-  console.log(skills);
+
   useGSAP(() => {
     const items = Array.from(document.querySelectorAll(".hoverables li"));
     items.forEach((item) => {
@@ -34,7 +34,7 @@ export default function SkillsHover() {
   return (
     <section className="my-36 grid h-screen w-full text-white sm:grid-cols-2 sm:px-3 md:px-10 lg:grid-cols-[1.5fr_1fr]">
       <div className="col-span-1 flex w-full items-center">
-        <ul className="hoverables flex list-none flex-col justify-center font-bold text-[#2cd2dd] sm:text-3xl md:text-4xl lg:text-7xl">
+        <ul className="hoverables flex list-none flex-col justify-center font-bold text-[#2cd2dd] sm:text-4xl lg:text-6xl xl:text-7xl">
           {skills.map((skill, i) => {
             return (
               <li onMouseEnter={() => handleHover(i)} key={skill.id}>

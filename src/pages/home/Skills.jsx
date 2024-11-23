@@ -48,7 +48,7 @@ function Skills({ skills }) {
   return (
     <section className="bg-black">
       <div className="oldphone:w-[90%] h-[100%] oldPhone:mx-auto oldPhone:w-[90%] md:flex md:w-full md:flex-col md:items-center">
-        <h2 className="py-10 pl-5 text-center text-4xl font-bold text-[#2cd2dd] md:hidden">
+        <h2 className="py-10 text-center text-4xl font-bold uppercase text-[#2cd2dd] oldPhone:mb-5 oldPhone:text-4xl android:text-5xl md:hidden">
           Skills
         </h2>
 

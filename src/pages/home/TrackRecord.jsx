@@ -90,7 +90,7 @@ export default function TrackRecord() {
       ref={scrollEl}
       className="grid h-screen w-full bg-black px-10 text-[#2cd2dd] oldPhone:grid-cols-2 oldPhone:grid-rows-[2fr_repeat(3,_1fr)_2fr] oldPhone:pb-16 oldPhone:text-xs android:text-sm sm:pb-24 sm:text-lg lg:grid-cols-4 lg:grid-rows-[3fr_2fr_9fr] lg:pb-9 lg:text-xl xl:text-2xl"
     >
-      <div className="col-span-full flex items-center oldPhone:flex oldPhone:justify-center lg:justify-end">
+      <div className="col-span-full flex items-center oldPhone:row-start-6 oldPhone:mt-10 oldPhone:flex oldPhone:justify-center lg:row-start-1 lg:justify-end lg:pt-0">
         <div className="w-fit overflow-hidden">
           <p ref={blind1} className="font-bold uppercase leading-none">
             Well versed developer with a designer's eye
@@ -140,7 +140,7 @@ export default function TrackRecord() {
         <div className="w-fit overflow-hidden lg:w-fit">
           <div
             ref={blind5}
-            className="oldPhone:h- w-fit oldPhone:flex oldPhone:flex-col oldPhone:justify-center lg:h-fit"
+            className="oldPhone:h- w-fit oldPhone:flex oldPhone:h-full oldPhone:flex-col oldPhone:justify-center lg:h-fit"
           >
             {" "}
             <p className="font-bold uppercase leading-none oldPhone:text-end">
@@ -159,26 +159,26 @@ export default function TrackRecord() {
           </div>
         </div>
       </div>
-      <div className="col-span-2 flex flex-col items-end justify-end overflow-hidden lg:col-span-2 lg:col-start-3 lg:row-span-2 lg:row-start-3">
-        <div className="flex h-full items-center space-x-5 lg:flex-col lg:items-end lg:justify-end">
+      <div className="col-span-2 flex flex-col items-end justify-end overflow-hidden oldPhone:row-start-1 oldPhone:justify-center lg:col-span-2 lg:col-start-3 lg:row-span-2 lg:row-start-3">
+        <div className="flex items-center space-x-5 oldPhone:text-4xl android:text-5xl lg:flex-col lg:items-end lg:justify-end">
           {" "}
           {/* Inline alignment for Track & Record */}
           <div
             ref={track}
-            className="bg font-bold uppercase leading-[.76] oldPhone:text-start oldPhone:text-4xl android:text-5xl sm:text-6xl lg:text-8xl xl:text-[10rem]"
+            className="bg font-bold uppercase leading-[.76] oldPhone:text-start sm:text-6xl lg:text-8xl xl:text-[10rem]"
           >
             Track
           </div>
           <div
             ref={record}
-            className="font-bold uppercase leading-[.72] oldPhone:text-4xl android:text-5xl sm:text-6xl lg:text-8xl xl:text-[10rem]"
+            className="font-bold uppercase leading-[.72] sm:text-6xl lg:text-8xl xl:text-[10rem]"
           >
             Record
           </div>
         </div>
         <div
           ref={recap}
-          className="oldPhone:text-md font-bold uppercase xl:text-lg"
+          className="font-bold uppercase oldPhone:text-sm xl:text-lg"
         >
           experience highlights
         </div>
