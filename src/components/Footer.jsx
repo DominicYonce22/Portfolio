@@ -39,7 +39,7 @@ function Footer() {
         </li>
       </ul>
       <div className="items-center justify-end oldPhone:hidden sm:flex">
-        <CtaButton>Contact Me</CtaButton>
+        <CtaButton>View Resume</CtaButton>
       </div>
       <div className="col-span-full flex items-center justify-between oldPhone:px-6 android:px-0">
         <div className="flex items-center oldPhone:gap-1 android:gap-2">

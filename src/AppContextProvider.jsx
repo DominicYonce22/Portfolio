@@ -1,9 +1,11 @@
 import { useTransition } from "@react-spring/web";
 import { createContext, useState } from "react";
 import { skills } from "./groups/data";
+import { blogs } from "./groups/blog";
 export const AppContext = createContext();
 
 export default function AppContextProvider({ children }) {
+  const [selected, setSelected] = useState({});
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [currSlide, setCurrSlide] = useState(0);
   const [flip, setFlip] = useState(false);
@@ -46,6 +48,9 @@ export default function AppContextProvider({ children }) {
         idle,
         screenWidth,
         handleResize,
+        selected,
+        setSelected,
+        blogs,
       }}
     >
       {children}

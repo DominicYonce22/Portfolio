@@ -3,7 +3,9 @@ import Layout from "./Layout";
 import Home from "./pages/home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Portfolio from "./pages/portfolio/Portfolio";
-import Blog from "./pages/blog/Blog";
+
+import Blog from "./pages/blogs/Blog";
+import BlogsLayout from "./pages/blogs/BlogsLayout";
 
 function App() {
   return (
@@ -19,7 +21,8 @@ function App() {
         >
           <Route index element={<Home />} />
           <Route path="portfolio" element={<Portfolio />} />
-          <Route path="blog" element={<Blog />} />
+          <Route path="blog" element={<BlogsLayout />} />
+          <Route path="blog/:id" element={<Blog />} />
         </Route>
       </Routes>
     </BrowserRouter>

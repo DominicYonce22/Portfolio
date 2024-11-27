@@ -9,7 +9,7 @@ export const projects = [
     links: [
       {
         type: "web",
-        link: "https://dominicproject2.netlify.app/",
+        link: "https://orange-omnifood.netlify.app/",
         icon: iconTypes.web,
       },
       {
@@ -63,7 +63,7 @@ export const projects = [
     links: [
       {
         type: "web",
-        link: "https://dominic-wild-oasis.netlify.app/",
+        link: "https://white-wild-oasis.netlify.app/",
         icon: iconTypes.web,
       },
       {
@@ -118,7 +118,7 @@ export const projects = [
     links: [
       {
         type: "web",
-        link: "https://dancing-eclair-10841f.netlify.app/",
+        link: "https://candy-paint.netlify.app/",
         icon: iconTypes.web,
       },
     ],

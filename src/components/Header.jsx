@@ -16,11 +16,11 @@ function Header() {
   }, []);
 
   return (
-    <header className="relative justify-center bg-black px-14 py-9 oldPhone:px-7 oldPhone:py-3 lg:flex">
+    <header className="relative justify-center px-14 py-9 oldPhone:px-7 oldPhone:py-3 lg:flex">
       <menu
         className={`${openMenu ? "top-[25%] border-[1px] border-[#2cd2dd]" : "top-[-100vw]"} absolute right-[5%] z-50 rounded-xl bg-inherit px-3 py-4 md:static md:rounded-none md:border-none md:bg-transparent md:p-0`}
       >
-        <div className="flex flex-col items-end gap-3 sm:pt-3 md:flex-row md:items-center md:justify-center md:gap-24">
+        <div className="flex flex-col items-end gap-3 md:flex-row md:items-center md:justify-center md:gap-24">
           <li>
             <HeaderLink openMenu={openMenu} text="About Me" path="/" />
           </li>
@@ -32,6 +32,7 @@ function Header() {
           </li>
         </div>
       </menu>
+
       <span
         onClick={() => setOpenMenu(!openMenu)}
         className="text-3xl text-[#2cd2dd] hover:text-[#23a8b1] md:hidden"
