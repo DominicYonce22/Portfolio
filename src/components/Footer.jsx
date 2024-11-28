@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import CtaButton from "./CtaButton";
 import Icon from "./Icon";
 import Logo from "./Logo";
 
@@ -39,7 +38,14 @@ function Footer() {
         </li>
       </ul>
       <div className="items-center justify-end oldPhone:hidden sm:flex">
-        <CtaButton>View Resume</CtaButton>
+        <a
+          href="/Resume.pdf"
+          className="flex justify-center gap-2 rounded-sm bg-[#2cd2dd] px-3 py-2 text-xs font-semibold uppercase text-black hover:bg-[#23a8b1] oldPhone:px-2 oldPhone:py-1 oldPhone:tracking-[.55px] android:px-3 android:text-sm md:items-center md:text-lg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Resume
+        </a>
       </div>
       <div className="col-span-full flex items-center justify-between oldPhone:px-6 android:px-0">
         <div className="flex items-center oldPhone:gap-1 android:gap-2">
