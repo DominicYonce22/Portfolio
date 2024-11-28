@@ -75,7 +75,7 @@ export const projects = [
     sampleUser: { email: "mimi@example.com", password: "12345" },
     image: "/images/wild-oasis.png",
     description:
-      "Wild Oasis is a cabin booking app with Supabase backend, user authentication, React Query for data fetching, and React Router for navigation.",
+      "Wild Oasis is a cabin booking app with Supabase backend, user authentication, React Query for data fetching, and React Router for navigation. Testing Account: mimi@example.com, password:12345",
   },
   {
     name: "Worldwise",

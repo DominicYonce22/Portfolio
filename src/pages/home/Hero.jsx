@@ -95,12 +95,12 @@ export default function Hero() {
           </h1>
 
           <p className="android:text-md bg mb-2 w-full text-sm leading-normal text-[#ced4da] oldPhone:mb-10 oldPhone:break-all oldPhone:px-8 oldPhone:text-sm oldPhone:leading-[2.2] oldPhone:tracking-[0.5px] oldPhone:[word-spacing:0.8px] android:mb-16 android:font-bold android:leading-7 android:tracking-tight sm:px-[8%] sm:text-lg sm:leading-8 md:mb-14 md:text-xl md:font-normal md:leading-10 md:tracking-[-2px] lg:px-32 lg:text-2xl lg:font-normal lg:leading-[45px] lg:tracking-[-3px]">
-            Hi, I am Dominic. I am a{" "}
-            <span className="text-[#2cd2dd]"> Frontend Developer</span>. Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Minima, incidunt
-            alias aliquid ratione blanditiis quasi, nulla aspernatur dignissimos
-            veritatis consequuntur libero? Reiciendis reprehenderit suscipit,
-            tempora placeat explicabo architecto perspiciatis illum!
+            I'm a<span className="text-[#2cd2dd]"> Frontend Developer</span> and
+            a recent graduate (Class of 2024) with a BSCS from STI-WNU. I'm a
+            front-end developer with strong experience in the React framework,
+            passionate about building sleek, responsive user interfaces. With a
+            solid foundation in web development, I focus on turning complex
+            ideas into seamless experiences.
           </p>
         </div>
       </div>
@@ -125,13 +125,13 @@ export default function Hero() {
             Dominic Bonafe
           </h1>
 
-          <p className="android:text-md mb-2 w-full text-sm font-bold leading-normal text-black oldPhone:mb-10 oldPhone:break-all oldPhone:px-8 oldPhone:text-sm oldPhone:leading-[2.2] oldPhone:tracking-[0.5px] oldPhone:[word-spacing:0.8px] android:mb-16 android:font-bold android:leading-7 android:tracking-tight sm:px-[8%] sm:text-lg sm:leading-8 md:mb-14 md:text-xl md:font-normal md:leading-10 md:tracking-[-2px] lg:px-32 lg:text-2xl lg:font-normal lg:leading-[45px] lg:tracking-[-3px]">
-            Hi, I am Dominic. I am a{" "}
-            <span className="text-white"> Frontend Developer</span>. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit. Illum veritatis
-            ratione, odio quas fugit explicabo maiores, exercitationem, earum
-            hic iusto velit. Ad earum, incidunt odio itaque temporibus saepe
-            ipsa recusandae?
+          <p className="android:text-md bg mb-2 w-full text-sm leading-normal text-black oldPhone:mb-10 oldPhone:break-all oldPhone:px-8 oldPhone:text-sm oldPhone:leading-[2.2] oldPhone:tracking-[0.5px] oldPhone:[word-spacing:0.8px] android:mb-16 android:font-bold android:leading-7 android:tracking-tight sm:px-[8%] sm:text-lg sm:leading-8 md:mb-14 md:text-xl md:font-normal md:leading-10 md:tracking-[-2px] lg:px-32 lg:text-2xl lg:font-normal lg:leading-[45px] lg:tracking-[-3px]">
+            I'm a<span className="text-white"> Frontend Developer</span> and a
+            recent graduate (Class of 2024) with a BSCS from STI-WNU. I'm a
+            front-end developer with strong experience in the React framework,
+            passionate about building sleek, responsive user interfaces. With a
+            solid foundation in web development, I focus on turning complex
+            ideas into seamless experiences.
           </p>
         </div>
       </div>

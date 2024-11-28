@@ -58,7 +58,7 @@ export default function Blog() {
       <div className="flex justify-end">
         <button
           className="flex items-center justify-center gap-2 bg-[#2cd2dd] px-3 py-1 text-black oldPhone:text-xs sm:text-base"
-          onClick={() => navigate("/blog")}
+          onClick={() => navigate("/blogs")}
         >
           <span className="flex items-center justify-center font-bold oldPhone:text-2xl sm:text-4xl">
             <ion-icon name="arrow-back-circle"></ion-icon>

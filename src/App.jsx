@@ -21,7 +21,7 @@ function App() {
         >
           <Route index element={<Home />} />
           <Route path="portfolio" element={<Portfolio />} />
-          <Route path="blog" element={<BlogsLayout />} />
+          <Route path="blogs" element={<BlogsLayout />} />
           <Route path="blog/:id" element={<Blog />} />
         </Route>
       </Routes>

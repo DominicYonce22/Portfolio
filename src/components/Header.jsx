@@ -16,11 +16,11 @@ function Header() {
   }, []);
 
   return (
-    <header className="relative justify-center px-14 py-9 oldPhone:px-7 oldPhone:py-3 lg:flex">
+    <header className="sticky top-0 z-50 h-24 w-full justify-center bg-black px-14 py-9 oldPhone:px-7 oldPhone:py-3 lg:flex">
       <menu
-        className={`${openMenu ? "top-[25%] border-[1px] border-[#2cd2dd]" : "top-[-100vw]"} absolute right-[5%] z-50 rounded-xl bg-inherit px-3 py-4 md:static md:rounded-none md:border-none md:bg-transparent md:p-0`}
+        className={`${openMenu ? "top-[25%] border-[1px] border-[#2cd2dd]" : "top-[-100vw]"} absolute right-[5%] z-50 rounded-xl bg-black px-3 py-4 md:static md:my-auto md:rounded-none md:border-none md:p-0`}
       >
-        <div className="flex flex-col items-end gap-3 md:flex-row md:items-center md:justify-center md:gap-24">
+        <div className="flex flex-col items-center gap-3 md:flex-row md:items-center md:justify-center md:gap-24">
           <li>
             <HeaderLink openMenu={openMenu} text="About Me" path="/" />
           </li>
@@ -28,7 +28,7 @@ function Header() {
             <HeaderLink openMenu={openMenu} text="Portfolio" path="portfolio" />
           </li>
           <li>
-            <HeaderLink openMenu={openMenu} text="Blog" path="blog" />
+            <HeaderLink openMenu={openMenu} text="Blogs" path="blogs" />
           </li>
         </div>
       </menu>
