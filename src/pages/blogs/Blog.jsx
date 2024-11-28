@@ -23,8 +23,8 @@ export default function Blog() {
         <img className="w-full" src={image?.link} alt={title} />
       </div>
 
-      <div className="grid grid-cols-[1fr_4fr] grid-rows-[1fr_auto] oldPhone:mb-9 oldPhone:gap-x-7 oldPhone:gap-y-8 android:mb-14 android:gap-y-11 lg:grid-cols-[auto_1fr] lg:gap-x-14">
-        <div className="col-span-1 col-start-1 mb-5 flex items-center overflow-hidden rounded-full oldPhone:h-[3rem] oldPhone:w-[3rem] android:h-[4rem] android:w-[4rem] sm:h-[5rem] sm:w-[5rem]">
+      <div className="grid grid-cols-[1fr_4fr] grid-rows-[1fr_auto] oldPhone:mb-9 oldPhone:gap-x-7 oldPhone:gap-y-8 android:mb-14 android:gap-y-11 md:grid-cols-[auto_1fr] lg:gap-x-[2.5rem] xl:gap-y-2">
+        <div className="col-span-1 col-start-1 mb-5 flex items-center overflow-hidden rounded-full bg-blue-400 oldPhone:h-[3rem] oldPhone:w-[3rem] android:h-[4rem] android:w-[4rem] sm:h-[5rem] sm:w-[5rem] lg:row-start-1">
           <img
             onMouseEnter={() => console.log("hovered")}
             src={author?.imageUrl}
@@ -32,9 +32,9 @@ export default function Blog() {
             alt="image of author"
           />
         </div>
-        <div className="lg:row-start-2">
+        <div className="lg:row-start-1 xl:row-start-2">
           <p className="oldPhone:text-2xl android:text-3xl">{author?.name}</p>
-          <p className="oldPhone:mb-2 oldPhone:text-[10px] android:mb-5 android:text-[11px] sm:text-inherit md:mb-4 xl:mb-10">
+          <p className="oldPhone:mb-2 oldPhone:text-[10px] android:mb-5 android:text-[11px] sm:text-inherit md:mb-4 lg:text-[14px] xl:mb-10">
             {author?.fakeTitle}
           </p>
           <div className="flex gap-4 md:flex-row xl:flex-col">
@@ -50,7 +50,7 @@ export default function Blog() {
           </div>
         </div>
 
-        <div className="sm:px-none col-span-2 row-start-2 font-medium text-[#2cd2dd] oldPhone:text-xs oldPhone:leading-[2rem] android:px-4 sm:text-base sm:leading-[3rem] lg:row-span-2 lg:row-start-1 lg:self-center lg:text-lg lg:leading-[2.75rem] lg:tracking-wide">
+        <div className="sm:px-none col-span-2 row-start-2 font-medium text-[#2cd2dd] oldPhone:text-xs oldPhone:leading-[2rem] android:px-4 sm:text-base sm:leading-[3rem] lg:row-span-2 lg:row-start-2 lg:self-center lg:text-lg lg:leading-[2.75rem] lg:tracking-wide xl:row-start-1">
           {content}
         </div>
       </div>
@@ -63,7 +63,7 @@ export default function Blog() {
           <span className="flex items-center justify-center font-bold oldPhone:text-2xl sm:text-4xl">
             <ion-icon name="arrow-back-circle"></ion-icon>
           </span>
-          Go back to articles
+          Go back to blogs
         </button>
       </div>
     </div>
