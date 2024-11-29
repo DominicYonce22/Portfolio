@@ -28,7 +28,7 @@ function SkillsCarousel({ skills }) {
               }}
             >
               <div className="h-full w-full border-[1px] border-[#2cd2dd] p-8 text-[#2cd2dd]">
-                <h3 className="text-bold mb-2 oldPhone:text-xl">
+                <h3 className="text-bold mb-2 oldPhone:text-base">
                   {skills[index].title}
                 </h3>
                 <sub className="mb-11 text-gray-400 oldPhone:hidden oldPhone:text-justify android:block android:text-left android:text-sm android:tracking-tighter">
@@ -38,13 +38,13 @@ function SkillsCarousel({ skills }) {
                   <ion-icon name={skills[index].icon}></ion-icon>
                 </span>
 
-                <ul className="flex list-none flex-col gap-3">
+                <ul className="flex list-none flex-col gap-7">
                   {skills[index].qualities.map((q, index) => (
                     <li
                       key={index}
-                      className="flex gap-2 oldPhone:text-[12px] android:text-sm"
+                      className="flex items-center gap-2 font-bold uppercase oldPhone:text-[10px] sm:text-sm"
                     >
-                      <span className="text-bold">
+                      <span className="text-bold flex items-center oldPhone:text-xl">
                         <ion-icon name="checkmark-circle-outline"></ion-icon>
                       </span>
                       {q}

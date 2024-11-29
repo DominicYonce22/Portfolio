@@ -41,7 +41,7 @@ export default function BlogsLayout() {
           </div>
 
           <h3 className="col-span-2 flex flex-col justify-center uppercase oldPhone:col-start-1 oldPhone:row-start-1 oldPhone:mb-8 oldPhone:text-[14px] android:mb-0 sm:text-[24px] md:row-span-1 md:row-start-1 md:text-[27px] lg:text-3xl xl:col-start-2 xl:text-4xl">
-            <p className="mb-2 oldPhone:text-[15px] oldPhone:font-extrabold sm:text-lg lg:text-3xl">
+            <p className="mb-2 oldPhone:text-[12px] oldPhone:font-extrabold android:text-[14px] sm:text-lg lg:text-3xl">
               {blogs[0].title}
             </p>
             <p className="font-light oldPhone:text-[11px] android:text-[.75rem] sm:text-lg lg:text-xl">{`Author: ${blogs[0].author.name}`}</p>
@@ -54,7 +54,7 @@ export default function BlogsLayout() {
             <button
               ref={buttonRef}
               onClick={() => handleSelectBlog(blogs[0])}
-              className="my-auto flex items-center gap-2 bg-[#2cd2dd] px-2 py-1 text-black oldPhone:mx-auto oldPhone:h-8 oldPhone:w-[41%] android:w-[8.5rem] android:justify-center sm:w-fit sm:self-start md:ml-0"
+              className="my-auto flex shrink-0 items-center gap-2 bg-[#2cd2dd] px-2 py-1 text-black oldPhone:mx-auto oldPhone:h-8 android:justify-center sm:w-fit sm:self-start md:ml-0"
             >
               <p>Read blog</p>
               <span className="flex items-center">

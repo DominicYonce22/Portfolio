@@ -36,13 +36,13 @@ export default function PortfolioCard({ proj }) {
   });
 
   return (
-    <div className="flex h-[70vh] w-full flex-col justify-between border border-[#2cd2dd] p-4 lg:gap-8">
+    <div className="flex w-full flex-col justify-between gap-4 border border-[#2cd2dd] p-4 lg:gap-8">
       <img className="h-[40]" src={proj.image} ref={image} />
       <div className="flex h-[50%] flex-col oldPhone:justify-center lg:justify-between">
-        <h3 className="text-left font-bold uppercase oldPhone:mb-3 oldPhone:text-2xl lg:mb-0 lg:pt-5 lg:text-xl xl:text-2xl">
+        <h3 className="text-left font-bold uppercase oldPhone:mb-3 oldPhone:text-xl lg:mb-0 lg:pt-5 lg:text-xl xl:text-2xl">
           {proj.name}
         </h3>
-        <p className="text-left text-base font-medium leading-relaxed sm:mb-4 md:mb-0 lg:text-sm lg:leading-loose">
+        <p className="text-left text-base font-medium leading-relaxed oldPhone:text-xs oldPhone:leading-[2] sm:mb-4 md:mb-0 lg:text-sm">
           {proj.description}
         </p>
       </div>

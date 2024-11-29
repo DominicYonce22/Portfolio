@@ -74,9 +74,9 @@ export default function Hero() {
   return (
     <section
       ref={container}
-      className="relative h-screen bg-black py-16 sm:py-24"
+      className="relative h-screen bg-black py-0 sm:py-24"
     >
-      <div className="h-full bg-black py-[3rem] text-justify text-[2rem] tracking-tighter backdrop-blur-md oldPhone:mx-auto oldPhone:w-[90%] oldPhone:py-6 md:py-16">
+      <div className="h-full bg-black py-[3rem] text-justify text-[2rem] tracking-tighter backdrop-blur-md oldPhone:mx-auto oldPhone:w-[90%] oldPhone:pt-[5.5rem] md:py-16">
         <div
           ref={hoverContent}
           className="oldPhone:text-base oldPhone:font-bold"
@@ -88,13 +88,12 @@ export default function Hero() {
             Dominic Bonafe
           </h1>
 
-          <p className="bg mb-2 w-full text-sm leading-normal text-[#ced4da] oldPhone:mb-10 oldPhone:break-all oldPhone:px-8 oldPhone:text-sm oldPhone:leading-[2.2] oldPhone:tracking-[0.5px] oldPhone:[word-spacing:0.8px] android:mb-16 android:leading-7 android:tracking-tight sm:px-[8%] sm:text-lg sm:leading-8 md:mb-14 md:text-xl md:font-normal md:leading-10 md:tracking-[-2px] lg:px-32 lg:text-2xl lg:font-normal lg:leading-[45px] lg:tracking-[-3px]">
+          <p className="bg mb-2 w-full text-sm leading-normal text-[#ced4da] oldPhone:mb-10 oldPhone:px-8 oldPhone:text-xs oldPhone:leading-[2.2] oldPhone:tracking-[0px] oldPhone:[word-spacing:0.8px] android:mb-16 android:leading-7 android:tracking-tight sm:px-[8%] sm:text-lg sm:leading-8 md:mb-14 md:text-xl md:font-normal md:leading-10 md:tracking-[-2px] lg:px-32 lg:text-2xl lg:font-normal lg:leading-[45px] lg:tracking-[-3px]">
             I'm a<span className="text-[#2cd2dd]"> Frontend Developer</span> and
             a recent graduate (Class of 2024) with a BSCS from STI-WNU. I have a
             strong experience in the React framework and passionate about
             building sleek, responsive user interfaces. With a solid foundation
-            in web development, I focus on turning complex ideas into seamless
-            experiences.
+            in web development.
           </p>
         </div>
       </div>
@@ -119,13 +118,12 @@ export default function Hero() {
             Dominic Bonafe
           </h1>
 
-          <p className="android:text-md bg mb-2 w-full text-sm leading-normal text-black oldPhone:mb-10 oldPhone:break-all oldPhone:px-8 oldPhone:text-sm oldPhone:leading-[2.2] oldPhone:tracking-[0.5px] oldPhone:[word-spacing:0.8px] android:mb-16 android:font-bold android:leading-7 android:tracking-tight sm:px-[8%] sm:text-lg sm:leading-8 md:mb-14 md:text-xl md:font-normal md:leading-10 md:tracking-[-2px] lg:px-32 lg:text-2xl lg:font-normal lg:leading-[45px] lg:tracking-[-3px]">
+          <p className="android:text-md bg mb-2 w-full text-justify text-sm font-bold leading-normal text-black oldPhone:mb-10 oldPhone:px-8 oldPhone:text-xs oldPhone:leading-[2.2] oldPhone:tracking-[0px] oldPhone:[word-spacing:0.8px] android:mb-16 android:leading-7 android:tracking-tight sm:px-[8%] sm:text-lg sm:leading-8 md:mb-14 md:text-xl md:font-normal md:leading-10 md:tracking-[-2px] lg:px-32 lg:text-2xl lg:font-normal lg:leading-[45px] lg:tracking-[-3px]">
             I'm a<span className="text-white"> Frontend Developer</span> and a
             recent graduate (Class of 2024) with a BSCS from STI-WNU. I have a
             strong experience in the React framework and passionate about
             building sleek, responsive user interfaces. With a solid foundation
-            in web development, I focus on turning complex ideas into seamless
-            experiences.
+            in web development.
           </p>
         </div>
       </div>

@@ -16,7 +16,7 @@ function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 h-24 w-full justify-center bg-black px-14 py-9 oldPhone:px-7 oldPhone:py-3 lg:flex">
+    <header className="sticky top-0 z-50 w-full justify-center bg-black px-14 py-9 oldPhone:h-14 oldPhone:px-2 oldPhone:py-3 sm:px-7 md:h-24 lg:flex">
       <menu
         className={`${openMenu ? "top-[25%] border-[1px] border-[#2cd2dd]" : "top-[-100vw]"} absolute right-[5%] z-50 rounded-xl bg-black px-3 py-4 md:static md:my-auto md:rounded-none md:border-none md:p-0`}
       >
@@ -30,6 +30,18 @@ function Header() {
           <li>
             <HeaderLink openMenu={openMenu} text="Blogs" path="blogs" />
           </li>
+          {openMenu && (
+            <li>
+              <a
+                href="/Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`rounded-sm ${openMenu ? "rounded-none border-none transition-all duration-75 hover:shadow-[0_1px_0_0_#23a8b1]" : "border-[#2cd2dd]"} bg-transparent px-3 py-2 text-xs uppercase text-[#2cd2dd] hover:border-[#23a8b1] hover:text-[#23a8b1] oldPhone:px-2 oldPhone:py-1 android:text-sm md:text-lg`}
+              >
+                View Resume
+              </a>
+            </li>
+          )}
         </div>
       </menu>
 
