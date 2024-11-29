@@ -88,7 +88,7 @@ export default function TrackRecord() {
   return (
     <div
       ref={scrollEl}
-      className="grid h-screen w-full bg-black pt-24 text-[#2cd2dd] oldPhone:grid-cols-2 oldPhone:grid-rows-[2fr_repeat(3,_1fr)_2fr] oldPhone:px-5 oldPhone:pb-16 oldPhone:text-[10px] android:text-[.80rem] sm:px-10 sm:pb-24 sm:text-lg lg:grid-cols-4 lg:grid-rows-[3fr_2fr_9fr] lg:pb-9 lg:text-xl xl:text-2xl"
+      className="grid h-screen w-full bg-black pt-24 text-[#2cd2dd] oldPhone:grid-cols-2 oldPhone:grid-rows-[2fr_repeat(3,_1fr)_2fr] oldPhone:px-5 oldPhone:pb-16 oldPhone:text-[9px] android:text-[.80rem] sm:px-10 sm:pb-24 sm:text-lg lg:grid-cols-4 lg:grid-rows-[3fr_2fr_9fr] lg:pb-9 lg:text-xl xl:text-2xl"
     >
       <div className="col-span-full flex items-center oldPhone:row-start-6 oldPhone:mt-10 oldPhone:flex oldPhone:justify-center lg:row-start-1 lg:justify-end lg:pt-0">
         <div className="w-fit overflow-hidden">

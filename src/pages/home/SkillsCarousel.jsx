@@ -16,7 +16,7 @@ function SkillsCarousel({ skills }) {
         {transitions((style, index) => {
           return (
             <animated.div
-              className="oldPhone:h-[24rem] oldPhone:w-[90%] android:h-[30rem] sm:w-[60%]"
+              className="oldPhone:w-[90%] sm:w-[60%]"
               key={skills[index].title}
               style={{
                 ...style,
@@ -27,11 +27,11 @@ function SkillsCarousel({ skills }) {
                   : "none",
               }}
             >
-              <div className="h-full w-full border-[1px] border-[#2cd2dd] p-8 text-[#2cd2dd]">
+              <div className="w-full border-[1px] border-[#2cd2dd] p-8 text-[#2cd2dd]">
                 <h3 className="text-bold mb-2 oldPhone:text-base">
                   {skills[index].title}
                 </h3>
-                <sub className="mb-11 text-gray-400 oldPhone:hidden oldPhone:text-justify android:block android:text-left android:text-sm android:tracking-tighter">
+                <sub className="mb-11 text-gray-400 oldPhone:hidden oldPhone:text-justify android:block android:text-left android:text-[-0.125rem] android:tracking-tighter">
                   {skills[index].subTitle}
                 </sub>
                 <span className="mb-12 block oldPhone:text-4xl android:text-6xl sm:text-7xl">
